@@ -23,13 +23,12 @@ export default class BatchController {
    return Batch.findOneById(batchId)
   }
 
-   @Post("/batch")
+   @Post("/batches")
    @HttpCode(201)
    async create(
    @Body() batch: Batch
   ) {
     const entity = await Batch.create(batch).save();
-
    return entity;
  }
 }

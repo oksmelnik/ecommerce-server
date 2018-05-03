@@ -26,5 +26,5 @@
   "scripts": {
     "start": "node .",
     "dev": "nodemon --inspect ."
-  }
+  },
 }

@@ -31,5 +31,8 @@
     "@typesCustom",
     "node_modules/@types"
   ],
-  "compileOnSave": true
+  "compileOnSave": true,
+  "production": {
+  "use_env_variable": "DATABASE_URL"
+}
 }

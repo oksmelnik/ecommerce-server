@@ -12,28 +12,26 @@ export const baseUrl = 'http://localhost:4001'
 export default class EvaController {
 
   @Get("/evas")
-   @HttpCode(201)
+  @HttpCode(200)
   async allEva() {
-  const eva = await Evaluation.find()
-  return { eva }
-}
+    const eva = await Evaluation.find()
+    return { eva }
+  }
 
  @Post("/:id([0-9]+)/eva")
  @HttpCode(201)
  async createEva(
  @Param('id') stuId: number,
- //@CurrentUser() teacher: Teacher,
  @Body() {color, date, remark}
 ) {
   const student = await Student.findOneById(stuId)
-  if(!student) throw new BadRequestError("Class doesn't exist.")
+  if(!student) throw new BadRequestError("Student doesn't exist.")
   const entity = await Evaluation.create({
     date: date,
     remark: remark,
     color: color,
     student: student
- }).save();
-
- return entity;
+  }).save()
+  return entity
 }
 }

@@ -12,8 +12,6 @@ export class Batch extends BaseEntity {
   @Column('text')
   batchName: string
 
-
-
   @OneToMany(() => Student, student => student.batch, {eager: true})
   students: Student[]
 

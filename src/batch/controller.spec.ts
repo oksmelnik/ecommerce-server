@@ -4,7 +4,9 @@ import app from '../app'
 import setupDb from '../db'
 
 const batch = {
-  "batchName": "Name"
+  "batchName": "Name",
+  "startDate": "2017-08-22T06:11:00.000Z",
+  "endDate": "2017-08-22T06:11:00.000Z"
 }
 
 beforeAll(async () => {
@@ -31,7 +33,9 @@ describe('post batch', () => {
     })
     .expect(201, {
       "batchName": "Name",
-      "id": 'someid'
+      "id": 'someid',
+      "startDate": "2017-08-22T06:11:00.000Z",
+      "endDate": "2017-08-22T06:11:00.000Z"
     })
   })
 })

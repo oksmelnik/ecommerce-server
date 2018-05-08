@@ -6,6 +6,7 @@
 1. write a full CRUD (create, read, update, delete) REST API
 2. Realize authirozation
 3. Got more familiar Typescript API
+4. Practice automated testing with Jest
 
 
 

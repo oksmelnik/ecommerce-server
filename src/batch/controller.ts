@@ -10,7 +10,7 @@ export const baseUrl = 'http://localhost:4001'
 export default class BatchController {
 
   @Get("/batches")
-  @HttpCode(201)
+  @HttpCode(200)
   async allBatches() {
   return  Batch.find()
 }

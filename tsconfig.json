@@ -13,6 +13,11 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "target": "es2017",
+    "lib": [
+      "esnext",
+      "es2015",
+      "dom"
+    ],
     "types" : [ "node" ],
     "typeRoots": [
       "node_modules/@types"

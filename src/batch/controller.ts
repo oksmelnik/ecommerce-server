@@ -5,6 +5,13 @@ Body, Patch
 import { Batch } from './entities'
 export const baseUrl = 'http://localhost:4001'
 
+const x = [
+  {"id": 1,
+  "batchName": "Name",
+  "startDate": "2017-08-22",
+  "endDate": "2017-08-22"}
+]
+const b = JSON.stringify(x)
 
 @JsonController()
 export default class BatchController {
@@ -12,7 +19,7 @@ export default class BatchController {
   @Get("/batches")
   @HttpCode(200)
   async allBatches() {
-    return  Batch.find()
+    return  {b}
   }
 
   @Get('/batches/:id([0-9]+)')
